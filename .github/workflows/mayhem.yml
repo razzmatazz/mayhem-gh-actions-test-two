@@ -69,8 +69,7 @@ jobs:
         with:
           mayhem-url: https://mayhem.forallsecure.com
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          # --owner saulius --project saulius/mayhem-gh-actions-test
-          args: --image ${{ needs.build.outputs.image }} --file ${{ matrix.mayhemfile }} --duration 300
+          args: --image ${{ needs.build.outputs.image }} --file ${{ matrix.mayhemfile }} --duration 300 --owner saulius --project saulius/mayhem-gh-actions-test-two
           sarif-output: sarif
 
       - name: Upload SARIF file(s)
